@@ -4,3 +4,6 @@
 [submodule "spring-auth-server-bff"]
 	path = spring-auth-server-bff
 	url = https://github.com/Srunoudomsambath/auth-server.git
+[submodule "client-bff"]
+	path = client-bff
+	url = https://github.com/Srunoudomsambath/oauth2-bff-client
