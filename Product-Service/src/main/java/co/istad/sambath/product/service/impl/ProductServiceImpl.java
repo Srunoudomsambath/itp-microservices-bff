@@ -42,6 +42,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product();
         product.setUuid(UUID.randomUUID().toString());
         product.setProductName(createProduct.productName());
+        product.setQuantity(createProduct.quantity());
         product.setPrice(createProduct.price());
 
         productRepository.save(product);
@@ -52,6 +53,7 @@ public class ProductServiceImpl implements ProductService {
                 .uuid(product.getUuid())
                 .productName(product.getProductName())
                 .price(product.getPrice())
+                .quantity(product.getQuantity())
                 .build();
     }
 

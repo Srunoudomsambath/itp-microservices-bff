@@ -15,7 +15,9 @@ public record CreateProduct(
 
         @NotNull(message = "Product Price can't be null")
         @Positive(message = "Product Price must be positive")
-        BigDecimal price
+        BigDecimal price,
+
+        Integer quantity
 
 ) {
 }

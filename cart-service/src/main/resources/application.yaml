@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cart-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
+  datasource:
+    url: jdbc:postgresql://localhost:5992/cart_db
+    username: cart
+    password: cart
+    driver-class-name: org.postgresql.Driver
+
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8081

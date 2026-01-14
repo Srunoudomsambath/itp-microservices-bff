@@ -23,6 +23,22 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway-bff" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/api-gateway-bff" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/cart-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/cart-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/eurekaserver" />
         <option name="modules">
           <set>

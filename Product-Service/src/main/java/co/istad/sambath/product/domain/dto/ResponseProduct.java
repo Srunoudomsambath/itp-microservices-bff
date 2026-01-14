@@ -11,6 +11,7 @@ public record ResponseProduct(
 
         String productName,
 
-        BigDecimal price
+        BigDecimal price,
+        Integer quantity
 
 ) { }

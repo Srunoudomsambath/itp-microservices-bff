@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.42/8365263844ebb62398e0dc33057ba10ba472d3b8/lombok-1.18.42.jar" />
         </processorPath>
-        <module name="custom-routing.main" />
+        <module name="com.istad.sambath.custom-routing.main" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +16,12 @@
       <module name="Product-Service" options="-parameters" />
       <module name="Product-Service.main" options="-parameters" />
       <module name="Product-Service.test" options="-parameters" />
+      <module name="cart-service" options="-parameters" />
+      <module name="cart-service.main" options="-parameters" />
+      <module name="cart-service.test" options="-parameters" />
+      <module name="com.istad.sambath.custom-routing" options="-parameters" />
+      <module name="com.istad.sambath.custom-routing.main" options="-parameters" />
+      <module name="com.istad.sambath.custom-routing.test" options="-parameters" />
       <module name="custom-routing" options="-parameters" />
       <module name="custom-routing.main" options="-parameters" />
       <module name="custom-routing.test" options="-parameters" />

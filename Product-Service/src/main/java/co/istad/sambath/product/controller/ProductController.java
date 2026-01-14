@@ -37,4 +37,5 @@ public class ProductController {
         productService.createProduct(createProduct);
         return ResponseEntity.status(HttpStatus.CREATED).body("Product created successfully");
     }
+
 }

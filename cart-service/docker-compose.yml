@@ -1,0 +1,16 @@
+services:
+  product-db:
+    image: postgres:16-alpine
+    container_name: cart-db
+    environment:
+      POSTGRES_DB: cart_db
+      POSTGRES_USER: cart
+      POSTGRES_PASSWORD: cart
+    ports:
+      - "5992:5432"
+    volumes:
+      - cart-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  cart-db-data:
