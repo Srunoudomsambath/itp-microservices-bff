@@ -1,3 +1,6 @@
 [submodule "api-gateway-bff"]
 	path = api-gateway-bff
 	url = https://github.com/Srunoudomsambath/itp-api-gateway.git
+[submodule "spring-auth-server-bff"]
+	path = spring-auth-server-bff
+	url = https://github.com/Srunoudomsambath/auth-server.git
