@@ -5,12 +5,13 @@ import co.istad.sambath.product.domain.dto.ResponseProduct;
 import co.istad.sambath.product.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
@@ -19,7 +20,10 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<ResponseProduct>> findAll() {
+    public ResponseEntity<List<ResponseProduct>> findAll(@RequestHeader(value = "Authorization", required = false) String authHeader) {
+        log.info("📨 Received Authorization header: {}",
+                authHeader != null ? authHeader.substring(0, Math.min(30, authHeader.length())) + "..." : "MISSING");
+
         return ResponseEntity.ok(productService.findAll());
     }
 
