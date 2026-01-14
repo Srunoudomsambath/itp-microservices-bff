@@ -54,6 +54,14 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-auth-server-bff" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-auth-server-bff" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

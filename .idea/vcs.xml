@@ -3,6 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/api-gateway-bff" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/spring-auth-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-auth-server-bff" vcs="Git" />
   </component>
 </project>

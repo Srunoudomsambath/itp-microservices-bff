@@ -19,6 +19,9 @@
       <module name="cart-service" options="-parameters" />
       <module name="cart-service.main" options="-parameters" />
       <module name="cart-service.test" options="-parameters" />
+      <module name="co.istad.spring-auth-server" options="-parameters" />
+      <module name="co.istad.spring-auth-server.main" options="-parameters" />
+      <module name="co.istad.spring-auth-server.test" options="-parameters" />
       <module name="com.istad.sambath.custom-routing" options="-parameters" />
       <module name="com.istad.sambath.custom-routing.main" options="-parameters" />
       <module name="com.istad.sambath.custom-routing.test" options="-parameters" />
