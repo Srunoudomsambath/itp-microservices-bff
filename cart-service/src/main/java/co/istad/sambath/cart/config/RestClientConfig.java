@@ -12,33 +12,33 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
-@Configuration
-public class RestClientConfig {
+    @Configuration
+    public class RestClientConfig {
 
-    @Bean
-    public ProductClient productClient(LoadBalancerClient loadBalancerClient) {
+        @Bean
+        public ProductClient productClient(LoadBalancerClient loadBalancerClient) {
 
-        RestClient restClient = RestClient.builder()
-                // 🔑 SERVICE NAME (Eureka / Gateway aware)
-                .baseUrl("http://localhost:8080")
-                .requestInterceptor((request, body, execution) -> {
+            RestClient restClient = RestClient.builder()
+                    // 🔑 SERVICE NAME (Eureka / Gateway aware)
+                    .baseUrl("http://localhost:8080")
+                    .requestInterceptor((request, body, execution) -> {
 
-                    // 🔐 Propagate JWT
-                    var authentication = SecurityContextHolder.getContext().getAuthentication();
+                        // 🔐 Propagate JWT
+                        var authentication = SecurityContextHolder.getContext().getAuthentication();
 
-                    if (authentication instanceof JwtAuthenticationToken jwtAuth) {
-                        String token = jwtAuth.getToken().getTokenValue();
-                        request.getHeaders().setBearerAuth(token);
-                    }
+                        if (authentication instanceof JwtAuthenticationToken jwtAuth) {
+                            String token = jwtAuth.getToken().getTokenValue();
+                            request.getHeaders().setBearerAuth(token);
+                        }
 
-                    return execution.execute(request, body);
-                })
-                .build();
+                        return execution.execute(request, body);
+                    })
+                    .build();
 
-        HttpServiceProxyFactory factory =
-                HttpServiceProxyFactory.builderFor(RestClientAdapter.create(restClient))
-                        .build();
+            HttpServiceProxyFactory factory =
+                    HttpServiceProxyFactory.builderFor(RestClientAdapter.create(restClient))
+                            .build();
 
-        return factory.createClient(ProductClient.class);
+            return factory.createClient(ProductClient.class);
+        }
     }
-}

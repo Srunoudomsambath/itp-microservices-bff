@@ -64,9 +64,9 @@ public class CartServiceImpl implements CartService {
         } else {
             // Create new cart item with ALL required fields
             CartItemEntity newItem = new CartItemEntity();
-            newItem.setProductId(product.uuid());           // ⚠️ THIS WAS MISSING
-            newItem.setProductName(product.productName());          // ⚠️ THIS WAS MISSING
-            newItem.setPrice(product.price());               // ⚠️ THIS WAS MISSING
+            newItem.setProductId(product.uuid());
+            newItem.setProductName(product.productName());
+            newItem.setPrice(product.price());
             newItem.setQuantity(request.getQuantity());
 
             cart.addItem(newItem);

@@ -44,6 +44,7 @@ public class ProductServiceImpl implements ProductService {
         product.setProductName(createProduct.productName());
         product.setQuantity(createProduct.quantity());
         product.setPrice(createProduct.price());
+        product.setImage(createProduct.image());
 
         productRepository.save(product);
     }
@@ -54,6 +55,7 @@ public class ProductServiceImpl implements ProductService {
                 .productName(product.getProductName())
                 .price(product.getPrice())
                 .quantity(product.getQuantity())
+                .image(product.getImage())
                 .build();
     }
 

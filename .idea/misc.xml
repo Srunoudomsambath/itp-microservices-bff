@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/api-gateway-bff" />
     <file type="web" url="file://$PROJECT_DIR$/cart-service" />
     <file type="web" url="file://$PROJECT_DIR$/Product-Service" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-auth-server" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_24" project-jdk-name="openjdk-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

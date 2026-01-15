@@ -17,7 +17,8 @@ public record CreateProduct(
         @Positive(message = "Product Price must be positive")
         BigDecimal price,
 
-        Integer quantity
+        Integer quantity,
+        String image
 
 ) {
 }
